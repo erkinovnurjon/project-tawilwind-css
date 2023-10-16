@@ -1,65 +1,76 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { Exit, IconHeader } from "../assets/Icon";
-import { NavigationLinks } from "../util/constants";
-import { styles } from '../util/style';
+
+import {navigationLinks} from "../util/constants"
+import { styles } from "../util/style";
+import {IconHeader , Exit, } from "../assets/Icon"
+import { Logo } from "../assets/images";
+
 
 const Navbar = () => {
-      const [ toggleNav , setToggleNav] =useState(false)
-      const [active , setActive] =useState('home')
-
-      const toggleHandler = () => {setToggleNav(prev => !prev)}
-      const activeHandler =(id) => setActive(id)
+  const [active, setActive] = useState("home");
+  const [toggleNav, setToggleNav] = useState(false);
+  const toggleHandler = () => {
+    setToggleNav((prev) => !prev);
+  };
+  const activeHandler = (id) => setActive(id);
   return (
-    <div className="flex justify-between items-center xs:px-16 px-4 py-6">
-      <div className={`${styles.heading}`}>
-        <img src={'https://i.pinimg.com/564x/99/fb/25/99fb258a9983020b200611898b538e31.jpg'} alt="" className="w-[100px] m-0 py-2 bg-none" />
+    <div className={` flex justify-between items-center w-full sm:px-16 px-6  navbar`}>
+      <div className={`${styles.heading1} cursor-pointer`}>
+        <img src={Logo} alt="logo" className="w-[130px] " />
       </div>
-      <ul className="sm:flex hidden list-none justify-end items-center flex-1">
-        {
-          NavigationLinks.map((nav, idx) => (
-            <li
-              className={
-                `font-montserrat font-normal text-[16px] text-white cursor-pointer hover:text-white ${
-                idx === NavigationLinks.length - 1 ? 'mr-0' : 'mr-10'
-              } ${active === nav.id ? 'text-white' : 'text-lighWhite'} `}
-              onClick={() => activeHandler(nav.id)}
-              key={nav.id}
+      <ul className="list-none sm:flex hidden justify-end items-center  ">
+        {navigationLinks.map((item, index) => (
+          <li key={item.id}>
+            <a
+              href={`#${item.id}`}
+              className={`${styles.navLink} ${
+                index === navigationLinks.length - 1 ? "mr-0" : "mr-10"
+              } ${active === item.id ? "active" : ""}
+               hover:text-white transition-all duration-300 navlink`}
+              onClick={() => activeHandler(item.id)}
             >
-              {nav.title}
-            </li>
-          ))
-        }
+              {item.title}
+            </a>
+          </li>
+        ))}
       </ul>
 
-      {/* navigation bar */}
-      <div>
-        <div className=" sm:hidden flex flex-1 justify-end items-center" onClick={toggleHandler}>
-       {
-        !toggleNav ? <IconHeader/>: <Exit />
-       }
+      {/* navigation btn*/}
+      <div className="sm:hidden flex flex-1 justify-end items-end">
+        <div
+          className="text-white text-[25px] cursor-pointer"
+          onClick={toggleHandler}
+        >
+          {toggleNav ? <Exit /> : <IconHeader /> }
         </div>
-        <div className={`${!toggleNav ? 'hidden' : 'flex'}  absolute w-full top-30 py-8 my-10 left-0 right-0 bg-black-gradient sidebar`}>
-             <ul className="flex  list-none justify-center items-center flex-1 ">
-        {
-          NavigationLinks.map((nav, idx) => (
-            <li
-              className={
-                `font-montserrat font-normal text-[16px] text-white cursor-pointer hover:text-white ${
-                idx === NavigationLinks.length - 1 ? 'mr-0' : 'mr-10'
-              } ${active === nav.id ? 'text-white' : 'text-lighWhite'} `}
-              onClick={() => activeHandler(nav.id)}
-              key={nav.id}
-            >
-              {nav.title}
-            </li>
-          ))
-        }
-      </ul>
+
+        <div
+          className={`${
+            !toggleNav ? "hidden" : "flex"
+          } p-6 absolute top-20 right-0
+          left-0 w-full sidebar bg-black-gradient`}
+        >
+          <ul className="list-none flex justify-center items-center flex-1  gap-3">
+            {navigationLinks.map((item, index) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  className={`${styles.navLink} ${
+                    index === navigationLinks.length - 1 ? "mr-0" : "mr-10"
+                  }${
+                    active === item.id ? "text-white" : "text-lightWhite"
+                  } hover:text-lightWhite transition-all duration-300`}
+                  onClick={() => activeHandler(item.id)}
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;

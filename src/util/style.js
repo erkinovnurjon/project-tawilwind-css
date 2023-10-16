@@ -8,7 +8,8 @@ export const styles ={
       flexCenter : 'flex justify-center items-center',
       flexStart: ' flex justify-start items-center',
       paragraph : 'text-[18px] font-normal text-lightWhite font-montserrat',
-      heading : 'font-montserrat font-semibold xs:text-[48px] text-[32px] text-white xs:leading-[76.8px] leading-[66.8px]',
-      container:'xl:max-w-1280px w-full'
+      container:'xl:max-w-1280px w-full',
+      heading1 : 'font-montserrat font-semibold ss:text-[72px] text-[48px] text-white xs:leading-[100px] leading-[65px]',
+      heading2 : 'font-montserrat font-semibold xs:text-[48px] text-[32px] text-white xs:leading-[76.8px] leading-[66.8px]',
 
 }
