@@ -1,7 +1,6 @@
-import { Home, Navbar, Statistics } from "./components"
-import Billing from "./components/Billing"
-import Bussines from "./components/Business"
-import Contract from "./components/Contract"
+import { Billing, Business, CTA, Contract, Home, Navbar, Statistics } from "./components"
+
+
 import { styles } from "./util/style"
 
 const App = () => {
@@ -18,7 +17,8 @@ const App = () => {
         <Statistics />
         <Contract />
         <Billing />
-        <Bussines />
+        <Business />
+        <CTA />
        </div>
     </div>
     </div>

@@ -20,10 +20,12 @@ const Contract = () => {
           <Button styles={" my-10 mr-[77%] "} />
        
       </div>
+      
       <div className={layout.sectionImg}>
         <img src={Card} alt="card " className="w-[100%] h-[100%] rounded-3xl" />
       </div>
     </section>
+    
   );
 };
 
