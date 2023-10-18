@@ -1,3 +1,11 @@
+import {
+  BsFillSendFill,
+  BsShieldFillCheck,
+  BsDropbox,
+  BsInstagram,
+} from "react-icons/bs";
+import { AiFillStar } from "react-icons/ai";
+
 export const navigationLinks = [
       {
             id:'home',
@@ -32,4 +40,30 @@ export const statistics = [
     title: "Tranzaksiya",
     value: "110M+",
   },
-]
+];
+
+export const features = [
+  {
+    id: 1,
+    icon: <AiFillStar className={`w-[50%] h-[50%] object-contain icons`} />,
+    title: "Mukofotlar",
+    content:
+      "Eng yaxshi kredit kartalari aksiyalar va sovrinlarning ajoyib kombinatsiyasini taklif qiladi.",
+  },
+  {
+    id: 2,
+    icon: (
+      <BsShieldFillCheck className={`w-[50%] h-[50%] object-contain icons`} />
+    ),
+    title: "100% Himoyalangan",
+    content:
+      "Ma'lumotlaringiz va tranzaksiyalaringiz xavfsiz ekanligiga ishonch hosil qilish uchun choralar.",
+  },
+  {
+    id: 3,
+    icon: <BsFillSendFill className={`w-[50%] h-[50%] object-contain icons`} />,
+    title: "Balansni o'tkazish",
+    content:
+      "Balansni o'tkazish kredit kartasi sizga foizlarni to'lashda ko'p pul tejash imkonini beradi.",
+  },
+];

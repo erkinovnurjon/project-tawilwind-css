@@ -1,5 +1,6 @@
 import { Home, Navbar, Statistics } from "./components"
 import Billing from "./components/Billing"
+import Bussines from "./components/Business"
 import Contract from "./components/Contract"
 import { styles } from "./util/style"
 
@@ -17,6 +18,7 @@ const App = () => {
         <Statistics />
         <Contract />
         <Billing />
+        <Bussines />
        </div>
     </div>
     </div>

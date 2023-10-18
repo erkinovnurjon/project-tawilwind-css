@@ -11,7 +11,7 @@ const Home = () => {
       className={`flex md:flex-row flex-col md:items-center ${styles.paddingY}`}
     >
       {/* animation image */}
-      <div className={`flex-1 ${styles.flexStart} md:my-0 my-10`}>
+      <div className={`flex-1 ${styles.flexStart} md:my-0 my-10 sm:px-16 px-6`}>
         <img
           src={`${Robot}`}
           alt="robot"

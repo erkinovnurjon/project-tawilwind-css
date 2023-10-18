@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import {navigationLinks} from "../util/constants"
+import { AiOutlineMenuFold } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { styles } from "../util/style";
-import {IconHeader , Exit, } from "../assets/Icon"
+import { navigationLinks } from "../util/constants";
 import { Logo } from "../assets/images";
-
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
@@ -14,7 +14,7 @@ const Navbar = () => {
   };
   const activeHandler = (id) => setActive(id);
   return (
-    <div className={` flex justify-between items-center w-full sm:px-16 px-6  navbar`}>
+    <div className={` flex  justify-between items-center w-full sm:px-16 px-6    navbar`}>
       <div className={`${styles.heading1} cursor-pointer`}>
         <img src={Logo} alt="logo" className="w-[130px] " />
       </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
           className="text-white text-[25px] cursor-pointer"
           onClick={toggleHandler}
         >
-          {toggleNav ? <Exit /> : <IconHeader /> }
+          {toggleNav ? <AiOutlineClose /> : <AiOutlineMenuFold />}
         </div>
 
         <div
@@ -50,7 +50,7 @@ const Navbar = () => {
           } p-6 absolute top-20 right-0
           left-0 w-full sidebar bg-black-gradient`}
         >
-          <ul className="list-none flex justify-center items-center flex-1  gap-3">
+          <ul className="list-none flex justify-center items-center flex-1 ">
             {navigationLinks.map((item, index) => (
               <li key={item.id}>
                 <a

@@ -7,6 +7,7 @@ export const styles ={
       margin: 'sm:mx-16 mx-6 sm:my-8 my-4',
       flexCenter : 'flex justify-center items-center',
       flexStart: ' flex justify-start items-center',
+      flexBetween : 'flex justify-between items-center',
       paragraph : 'text-[18px] font-normal text-lightWhite font-montserrat',
       container:'xl:max-w-1280px w-full',
       heading1 : 'font-montserrat font-semibold ss:text-[72px] text-[48px] text-white xs:leading-[100px] leading-[65px]',
