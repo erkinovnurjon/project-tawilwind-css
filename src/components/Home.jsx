@@ -26,7 +26,7 @@ const Home = () => {
         {/* discount */}
         <div className="flex flex-row items-center py-[6px] px-4 rounded mb-2 bg-slate-500 bg-discount-gradient max-w-[450px]">
           {/* <CiDiscount1 className="text-[30px] text-white mr-2" /> */}
-          <p className={`${styles.paragraph}`}>
+          <p className={`${styles.paragraph} text-center`}>
             <span className="text-white">20% </span> Chegirma{" "}
             <span className="text-white">1 Oylik</span> Xisob Uchun
           </p>
@@ -48,7 +48,7 @@ const Home = () => {
         </p>
 
         {/* getting started */}
-        <Button styles={"mt-6  max-w-[300px]"} />
+        <Button styles={"mt-6  max-w-[220px] text-center"} />
 
         {/* gradient bg */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />

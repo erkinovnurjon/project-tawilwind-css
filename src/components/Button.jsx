@@ -1,9 +1,14 @@
-const Button = ({styles}) => {
+const Button = ({ styles }) => {
   return (
-    <button className={`${styles} px-4 py-3 cursor-pointer rounded text-[18px] bg-blue-gradient`}>
-      boshlash
-    </button>
-  )
-}
+    <div
+      className={`py-3 px-6 font-montserrat font-medium text-[18px] bg-blue-gradient 
+      
+      rounded-[10px] outline-none cursor-pointer transition-transform  m-0
+      duration-300 hover:translate-y-[-3px] ${styles}`}
+    >
+      Button
+    </div>
+  );
+};
 
-export default Button
+export default Button;
