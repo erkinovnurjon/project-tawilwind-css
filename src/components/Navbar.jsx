@@ -16,7 +16,9 @@ const Navbar = () => {
   return (
     <div className={` flex  justify-between items-center w-full sm:px-16 px-6    navbar`}>
       <div className={`${styles.heading1} cursor-pointer`}>
-        <img src={Logo} alt="logo" className="w-[130px] " />
+        <a href="/">
+          <img src={Logo} alt="logo" className="w-[130px] " />
+        </a>
       </div>
       <ul className="list-none sm:flex hidden justify-end items-center  ">
         {navigationLinks.map((item, index) => (
@@ -48,14 +50,14 @@ const Navbar = () => {
           className={`${
             !toggleNav ? "hidden" : "flex"
           } p-6 absolute top-20 right-0
-          left-0 w-full sidebar bg-black-gradient`}
+          left-0 w-full sidebar bg-black-gradient z-[99]`}
         >
-          <ul className="list-none flex justify-center items-center flex-1 ">
+          <ul className="list-none flex justify-center items-center flex-1 gap-3 ">
             {navigationLinks.map((item, index) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className={`${styles.navLink} ${
+                  className={`${styles.navLink}  ${
                     index === navigationLinks.length - 1 ? "mr-0" : "mr-10"
                   }${
                     active === item.id ? "text-white" : "text-lightWhite"
