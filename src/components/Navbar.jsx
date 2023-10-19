@@ -61,7 +61,7 @@ const Navbar = () => {
                     index === navigationLinks.length - 1 ? "mr-0" : "mr-10"
                   }${
                     active === item.id ? "text-white" : "text-lightWhite"
-                  } hover:text-lightWhite transition-all duration-300`}
+                  } hover:text-lightWhite text-[15px] transition-all duration-300`}
                   onClick={() => activeHandler(item.id)}
                 >
                   {item.title}

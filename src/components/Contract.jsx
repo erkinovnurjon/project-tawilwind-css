@@ -17,7 +17,7 @@ const Contract = () => {
           corrupti optio!
         </p>
         
-          <Button styles={" my-10 mr-[77%] "} />
+          <Button styles={" my-10 sm:mr-[77%] mr-0 "} />
        
       </div>
       
