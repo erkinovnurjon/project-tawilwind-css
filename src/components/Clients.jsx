@@ -1,9 +1,18 @@
-import React from 'react'
+import { clients } from "../util/constants";
+import { styles } from "../util/style";
+import ClientCard from "./ClientCard";
+
 
 const Clients = () => {
   return (
-    <div>Clients</div>
-  )
-}
+    <div className={`${styles.flexCenter} my-4`}>
+      <div className={`${styles.flexCenter} flex-wrap w-full`}>
+        {clients.map((client, idx) => (
+          <ClientCard key={idx} {...client} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default Clients
+export default Clients;

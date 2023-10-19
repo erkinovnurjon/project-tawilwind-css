@@ -5,6 +5,9 @@ import {
   BsInstagram,
 } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
+import { FaAirbnb, FaFacebookF } from "react-icons/fa";
+import { FiLinkedin, FiTwitter } from "react-icons/fi";
+import { TbBrandBinance, TbBrandCoinbase } from "react-icons/tb";
 
 export const navigationLinks = [
       {
@@ -89,5 +92,36 @@ export const feedbacks = [
       "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Kenn Gallagher",
     title: "Founder & Ledaer",
+  },
+];
+
+export const clients = [
+  {
+    id: 1,
+    title: "AIRBNB",
+    logo: (
+      <FaAirbnb className="sm:w-[50px] w-[40px] sm:h-[50px] h-[40px] object-contain icons mr-3" />
+    ),
+  },
+  {
+    id: 2,
+    title: "BINANCE",
+    logo: (
+      <TbBrandBinance className="sm:w-[50px] w-[40px] sm:h-[50px] h-[40px] object-contain icons mr-3" />
+    ),
+  },
+  {
+    id: 3,
+    title: "COINBASE",
+    logo: (
+      <TbBrandCoinbase className="sm:w-[50px] w-[40px] sm:h-[50px] h-[40px] object-contain icons mr-3" />
+    ),
+  },
+  {
+    id: 4,
+    title: "DROPBOX",
+    logo: (
+      <BsDropbox className="sm:w-[50px] w-[40px] sm:h-[50px] h-[40px] object-contain icons mr-3" />
+    ),
   },
 ];
